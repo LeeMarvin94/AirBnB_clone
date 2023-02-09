@@ -1,7 +1,7 @@
 from datetime import datetime
 from models import storage
 from uuid import uuid4
-    """Defines a rectangle class
+"""Defines a rectangle class
     """
 
 
@@ -26,7 +26,8 @@ class BaseModel:
         else:
             self.id = str(
                 uuid4()
-            )  # the goal of using the module uuid4 is to have a unique id for each Base module object
+            )  # the goal of using the module uuid4 is to have
+# a unique id for each Base module object
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
             storage.new(self)
@@ -47,4 +48,3 @@ class BaseModel:
         my_dict["created_at"] = my_dict["created_at"].isoformat()
         my_dict["updated_at"] = my_dict["updated_at"].isoformat()
         return my_dict
-
